@@ -1,0 +1,54 @@
+problem statement -- find out the price of an apartment in a particular city.
+
+Eg: Delhi
+5 areas in Delhi - a,b,c,d,e
+2 & 3 bhk
+
+Dataset :
+area name , 2/3 bhk , sqft., balcony , car parking , builder's name ,
+no. of bathrooms, presence of pine trees within the apartment premises,
+house price
+
+house price - target/ dependent variable , 
+all other columns - features/ independent variables
+
+Correlation :
+
+it tells how 2 variables are related
+
+correlation value range -> (-1,1)
+
+Types : Positive , Negative correlation 
+
+Positive correlation :
+
+==>Direct variation between 2 columns (i.e) when the value of one column
+increases/ decreases , the value of the other also increases/decreases resp
+(features)
+house price , 2/3 bhk , sqft.
+
+regression equation for the above scenario:
+y(house price) = b1(2/3 bhk or no.of bedrooms) + b2(sqft) + c
+
+b1 -- strength of relationship between the no.of bedrooms column and the 
+      house price column
+
+Negative correlation :
+
+
+Indirect variation  => When the value of one column increases , the other 
+                       value of the other column decreases. (features)
+
+
+Correlation value range (-1, +1) 
+
+strong +ve correlation values = 0.8, 0.9 , 1 
+
+strong -ve correlation values = -0.8,-0.9, -1
+
+Correlation can be assessed only for numeric values.
+
+
+
+
+
