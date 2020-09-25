@@ -1,0 +1,13 @@
+Grid Search CV
+-- is another cross validation technique
+
+-- There is a facility to tune the hyperparameters of a model in this 
+technique.
+
+-- is a library function as a part of sklearn's model selection package.
+
+-- it helps to loop through predefined hyperparameters and it will
+fit the estimator model on the training data set. 
+
+--So that at the end, you can select the best hyperparameters from the
+predefined list based on the performance.
