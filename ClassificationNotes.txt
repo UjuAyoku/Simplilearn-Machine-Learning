@@ -1,0 +1,128 @@
+Classification :
+
+Supervised ML approach . when the target variable(y) is of categorical type,
+then you would choose classification. 
+
+Ex : Tall/Short/Medium , Sick/healthy , Grades of a student(A/B/C/D/E/F)
+
+algorithms:
+
+1. Logistic Regression
+2. K Nearest Neighbors 
+3. Decision Trees
+4. Support Vector Machines
+5. Naive Bayes Classifier 
+
+===========================================================================
+
+Quantitative variables , Qualitative variables 
+
+Quantitative -- continuous , discrete 
+
+Qualitative -- nominal , ordinal , binomial 
+
+
+binomial -- 0/1
+nominal  -- fruit names 
+ordinal  -- A>B>C>D>E>F , 5>4>3>2>1
+============================================================================
+
+Encoding:
+
+1.One hot encoding
+2. Label encoding
+
+One hot encoding :
+
+Gender -- Male/Female/Transgender 
+
+result :
+
+          Gender_Male   | Gender_Female  |  Gender_Transgender
+
+Male           1                 0                 0
+
+Female         0                 1                 0
+
+Transgender    0                 0                 1
+
+
+pd.get_dummies(df['Gender'])
+
+OHE is used to encode all the features.
+-----------------------------------------------------------------------------
+
+Label encoding :
+
+Grades -- A B C D E F
+
+result:
+Grades  -- 1 2 3 4 5 6 
+
+Label encoding should be used for encoding the categorical target variable
+
+Why only LE and not OHE for target variable?
+
+Bcoz the target variable has to remain as a single column
+ 
+----------------------------------------------------------------------------
+Classification Evaluation Metrics :
+
+For a 2 class classification problem , we consider confusion matrix          
+
+
+Cancer / not 
+
+                       cancer |    not       (predicted value)
+
+(actual value) cancer|  10(TP)|     20 (FN) 
+
+               not   |  30(FP)|     40 (TN)
+
+
+here, we have considered 100 data points 
+
+the model has correctly predicted the people who have cancer , as cancerous
+and this number = 10 = True Positives 
+
+the model has correctly predicted the people who are healthy , as healthy
+and this number = 40  = True negatives 
+
+The model has wrongly predicted the people who are not having cancer as 
+cancerous and this number = 30 = False Positive
+
+The model has wrongly predicted the people who are having cancer as healthy
+and this number = 20 = False Negative 
+
+False Positive -- are also called Type 1 error
+
+False Negative -- are also called Type 2 error
+
+Type 1 error is less harmful than a type 2 error. 
+
+Based on the values in the confusion matrix , we have 4 different metrics 
+for evaluating a classification model.
+
+1. Accuracy  = TP + TN / (TP + TN + FP + FN)
+
+2. Precision = TP / (TP + FP ) -- how precisely your model is identifying the
+               cancerous patients ( positive class)
+             = TN / (TN + FN) -- how precisely your model is identifying the
+               healthy people(negative class)
+
+3. Recall   = TP / TP + FN(positive)  or TN/ TN+ FP
+
+4. F1 Score = 2 * Recall*Precision / Recall + Precision
+
+=============================================================================
+
+scikit learn metrics -- accuracy_score --> tells you how accurate your model 
+                                           is
+
+scikit learn metrics -- classification report --> tells you about the precision,
+                                                recall and f1 score. 
+
+==============================================================================
+
+
+
