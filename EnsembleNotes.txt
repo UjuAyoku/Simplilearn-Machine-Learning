@@ -1,0 +1,101 @@
+
+Ensemble learning:
+
+-- It is a technique used for improving prediction accuracy.
+-- It uses multiple learning algorithms instead of a single algorithm.
+
+
+-- 2 commonly used ensemble methods are:
+
+-- Bagging 
+-- Boosting 
+
+Bagging --> 
+
+Eg : Random Forest Classifier
+-- A bagging technique based on decision tree algorithm.
+
+-- n number of decision trees put together -- > forest.
+-- The input data to the algorithm is sub sampled ( subset of both the
+records and columns) and then it is sent to every decision tree initialised
+earlier at a random fashion. --> random
+
+---> Random Forest Classifier.
+
+100 records, 10 features 
+DT - 5 
+DT 1 -- > 20, 3 (1-20 records , 1-3 features)
+DT 2 --> 30, 4 (21-50 records , 4-7 features)
+DT 3 --> 40, (51-90 records, 9,10 features)
+DT 4 --> 30, 5 (91-100, 1-20 records, 3,4,5,6,7 features)
+DT 5 --> 50, 2 (31-80 records, 2,8 features)
+
+Bagging --> 
+Multiple models are trained using the same algorithm with a 
+subset of the training data which is selected with replacement and is 
+assigned to each training model present.
+
+Bagging usually considers homogenous weak learners. It learns from them 
+independently and then it combines the output of the weak learners in 
+a deterministic averaging process.
+
+Eg: Iris data 
+
+3 classes - setosa, versicolor and virginica
+
+RFC : 
+
+n = 100 
+
+45 trees -setosa , 30 - virginica , 25 - versicolor
+
+new data point --> each and every decision tree on looking at the new
+                   data point would actually vote for one of the target 
+                   classes. The majority class label will be considered
+                   as the output. 
+
+Advantage of bagging:
+
+The ensemble model based in bagging reduces the variance of the 
+estimate(target column prediction value).
+
+------------------------------------------------------------------------------
+Boosting: 
+
+Advantage -- it reduces bias and in turn increases prediction accuracy.
+
+Boosting considers homogenous weak learners and it learns from them in a 
+sequential manner. Unlike bagging, where the learning is parallel.
+Here, the learning is also adaptive -- the base model depends on the 
+previous model's output.
+
+
+
+GBM - Many models are trained in a gradual, additive and sequential manner.
+
+Adaboost identifies the shortcomings by adding a high weight for the 
+misclassified data points. 
+GBM -- it uses a gradient in the loss function to identify the misclassified
+points. 
+
+Loss function -- a measure that indicates how well a model's coefficients
+are at fitting the underlying data. 
+y = ax + b + e(error component) 
+It combines all the outputs in a deterministic strategy.
+
+----------------------------------------------------------------------
+
+References:
+
+https://xgboost.readthedocs.io/en/latest/
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
